@@ -42,6 +42,11 @@ def personal(token):
         return jsonify ({"results":result})
     return jsonify({"error":"failed"})
 
+@api.route('/')
+def hello():
+    return "<h1> Hello Keith </h1>"
+
+
 @api.route('/api/first_name/<token>', methods =['GET'])
 def first_name(token):
     output = User.api_authenticate(token)
