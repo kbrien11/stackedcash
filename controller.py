@@ -201,4 +201,4 @@ def positions(company,token):
     return jsonify({"error":"failed"})
 
 if __name__=="__main__":
-    api.run('0.0.0.0', debug=True)
+    api.run(threaded=true, debug=True)
